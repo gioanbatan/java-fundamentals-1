@@ -28,7 +28,7 @@ public class TrainBill {
         // Calcolo del prezzo totale
         totalPrice = priceForKm * tripDistance;
 
-        System.out.println("Il prezzo totale del viaggio è: " + new DecimalFormat("#.##").format(totalPrice));
+        System.out.println("Il prezzo totale del viaggio è: " + new DecimalFormat("0.00").format(totalPrice));
 
         // Calcolo di eventuali sconti
         if (userAge < 18) {
@@ -43,7 +43,7 @@ public class TrainBill {
         }
 
         // Output del prezzo finale
-        System.out.println("Prezzo finale del biglietto: " + new DecimalFormat("#.##").format(finalPrice));
+        System.out.println("Prezzo finale del biglietto: " + new DecimalFormat("0.00").format(finalPrice));
 
         // Chiusura Scanner
         scan.close();
