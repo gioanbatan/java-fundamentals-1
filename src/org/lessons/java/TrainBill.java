@@ -1,14 +1,15 @@
 package org.lessons.java;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrainBill {
     public static void main(String[] args) {
-        int tripDistance = 0;
-        int userAge = 0;
+        int tripDistance;
+        int userAge;
         double priceForKm = 0.21;
-        double totalPrice = 0;
-        double finalPrice = 0;
+        double totalPrice;
+        double finalPrice;
 
         Scanner scan = new Scanner(System.in);
 
@@ -27,7 +28,7 @@ public class TrainBill {
         // Calcolo del prezzo totale
         totalPrice = priceForKm * tripDistance;
 
-        System.out.println("Il prezzo totale del viaggio è: " + totalPrice);
+        System.out.println("Il prezzo totale del viaggio è: " + new DecimalFormat("#.##").format(totalPrice));
 
         // Calcolo di eventuali sconti
         if (userAge < 18) {
@@ -42,6 +43,9 @@ public class TrainBill {
         }
 
         // Output del prezzo finale
-        System.out.println("Prezzo finale del biglietto: " + finalPrice);
+        System.out.println("Prezzo finale del biglietto: " + new DecimalFormat("#.##").format(finalPrice));
+
+        // Chiusura Scanner
+        scan.close();
     }
 }
